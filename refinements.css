@@ -60,3 +60,35 @@ footer{font-size:14px}footer a:last-child{min-height:44px;display:flex;align-ite
 }
 @media(max-width:360px){.brand{font-size:16px}.brand span{font-size:11px}.language select{max-width:100px}.platforms{grid-template-columns:1fr}.hero-content{padding-top:350px}.hero{min-height:800px}}
 @media(prefers-reduced-motion:reduce){.button:hover,.text-link:hover,.platforms a:hover,.socials a:hover,.email:hover{transform:none}}
+
+/* Text-only presentation: keep controls and smooth transitions functional. */
+.play,
+.cover-play,
+.star,
+.hero-content h1 i,
+.language > span[aria-hidden="true"] {
+  display: none !important;
+  animation: none !important;
+}
+.platforms a::before,
+.socials a::before {
+  content: none;
+  display: none;
+}
+.language select {
+  background-image: none;
+  padding: 10px 12px;
+  border: 1px solid #ffffff30;
+  border-radius: 10px;
+  background-color: #14171680;
+  cursor: pointer;
+}
+.language select:hover {
+  border-color: var(--gold);
+}
+.button,
+.platforms a,
+.socials a {
+  gap: 0;
+  text-align: center;
+}
