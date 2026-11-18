@@ -1,0 +1,62 @@
+/* Contemporary typography, tactile links and layouts for small screens. */
+:root{--font:'Plus Jakarta Sans','Manrope',Arial,sans-serif;--muted:#c1c4bd}
+body{font-family:var(--font);font-size:18px;line-height:1.75}
+.brand,h1,h2,.signature,.star{font-family:var(--font)}
+.brand{font-size:23px;font-weight:600;letter-spacing:2.5px}
+.brand span{display:block;font:600 13px/1.5 var(--font);letter-spacing:2px;margin-top:8px;color:var(--gold)}
+header{height:110px;gap:25px}
+nav{font-size:16px;gap:28px}nav a{min-height:44px;display:flex;align-items:center;text-transform:none}
+.language select{font-size:16px;min-height:44px;max-width:155px}
+.eyebrow{font-size:14px;letter-spacing:2px}
+h1{font-size:clamp(76px,8vw,130px);line-height:1;letter-spacing:-5px;font-weight:500}
+h1 span{padding-left:35px}h1 i{display:none}
+h2{font-size:clamp(40px,4.5vw,70px);line-height:1.14;letter-spacing:-2px;font-weight:500;overflow-wrap:anywhere}
+h2 em{font-style:normal;font-weight:500}
+.release-copy h2{font-size:clamp(54px,6vw,88px)}
+.hero-line{font-size:20px}.hero-bottom{font-size:14px;letter-spacing:1.2px;gap:25px}
+.section-top>span,.section-top>p{font-size:16px}
+.release-copy p:not(.eyebrow),.about-copy p{max-width:540px}
+.about-copy .intro{font-size:21px}
+.signature{font-size:28px;font-style:normal;font-weight:500;letter-spacing:1px;right:18px;bottom:20px;transform:none}
+.button,.text-link,.platforms a,.socials a,.email{border-radius:14px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;color:var(--paper);border:1px solid #ffffff30;background:linear-gradient(155deg,#39403c,#222824 65%);box-shadow:inset 0 1px 0 #ffffff20,0 5px 0 #0b0f0c,0 12px 25px #0003;font-weight:600}
+.button,.text-link{font-size:16px;min-height:56px;padding:15px 24px;line-height:1.5}
+.text-link{display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.button.light{background:linear-gradient(150deg,#f5eee2,#d7c4a5);color:#19201c;border-color:#f1e5d1;box-shadow:inset 0 1px 0 #fff,0 5px 0 #99876c,0 12px 25px #0003}
+.button:hover,.text-link:hover,.platforms a:hover,.socials a:hover,.email:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:inset 0 1px 0 #ffffff40,0 7px 0 #0b0f0c,0 18px 30px #0005;color:var(--paper)}
+.button.light:hover{color:#19201c;background:linear-gradient(150deg,#fff9ed,#e4cfab)}
+.button:active,.text-link:active,.platforms a:active,.socials a:active,.email:active{transform:translateY(3px);box-shadow:inset 0 1px 0 #ffffff20,0 1px 0 #0b0f0c,0 4px 10px #0003}
+.platform-section{padding:55px 6% 65px}.platform-section .eyebrow{font-size:15px;margin-bottom:30px}
+.platforms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.platforms a{min-height:86px;display:flex;align-items:center;justify-content:center;gap:12px;font-size:19px;letter-spacing:-.3px;padding:20px 15px}
+.platforms a:before,.socials a:before{content:'';display:block;flex:none;width:9px;height:28px;border-radius:8px;background:var(--accent,var(--gold));box-shadow:0 0 18px color-mix(in srgb,var(--accent,var(--gold)) 35%,transparent)}
+.platforms a:nth-child(1){--accent:#5cde96}.platforms a:nth-child(2){--accent:#fa889a}.platforms a:nth-child(3){--accent:#73d9ec}.platforms a:nth-child(4){--accent:#ff7575}
+.socials{gap:20px;flex-wrap:wrap}.socials a{display:flex;align-items:center;justify-content:center;gap:15px;min-width:200px;min-height:64px;padding:18px 28px;font-size:18px}
+.socials a:first-child{--accent:#eea1c6}.socials a:last-child{--accent:#8ce2e0}
+.email{font-size:clamp(18px,2.1vw,28px);padding:22px 32px;margin:16px 0 35px;max-width:100%;overflow-wrap:anywhere;border-color:#c7b18a99;background:linear-gradient(145deg,#45463b,#2c332c);line-height:1.5}
+.contact p:not(.eyebrow){font-size:18px}.contact h2{font-size:clamp(40px,4.7vw,72px)}
+footer{font-size:14px}footer a:last-child{min-height:44px;display:flex;align-items:center}
+.release-grid,.about{gap:7%}.release-copy,.about-copy{min-width:0}.star{right:0;font-size:40px}
+@media(max-width:1100px){header{padding-inline:4%;gap:15px}nav{gap:18px}.platforms{grid-template-columns:repeat(2,minmax(0,1fr))}.studio>div{left:52%;right:5%}.studio h2{font-size:50px}}
+@media(max-width:800px){
+ header{height:auto;min-height:140px;display:grid;grid-template-columns:minmax(0,1fr) auto;padding:18px 5% 12px;gap:12px;background:linear-gradient(#141716bd,#14171638);align-items:center}
+ .brand{font-size:19px;letter-spacing:1.4px}.brand span{font-size:12px;letter-spacing:1.2px;margin-top:6px;white-space:nowrap}
+ nav{grid-column:1/-1;display:flex;justify-content:flex-start;gap:22px;overflow-x:auto;max-width:100%;font-size:15px;padding-bottom:2px;scrollbar-width:thin}nav a{flex:none;min-height:44px}
+ .language{gap:3px;justify-self:end}.language select{font-size:14px;max-width:115px;padding-right:18px}
+ .hero{min-height:850px;height:auto;max-height:none}.hero-content{padding:380px 6% 115px}.hero-content .eyebrow{font-size:14px;letter-spacing:1.4px}
+ h1{font-size:clamp(58px,13vw,96px);letter-spacing:-3px;margin:25px 0;line-height:1.02}h1 span{padding-left:20px}
+ .hero-line{font-size:18px;line-height:1.65}.hero-bottom{font-size:13px;letter-spacing:1px;bottom:28px;left:6%;right:6%}
+ .hero-shade{background:linear-gradient(0deg,#141716 1%,#141716b3 42%,#14171608 78%)}
+ body{font-size:17px}.section{padding:65px 6%}.section-top{gap:18px;align-items:start}.section-top>span,.section-top>p{font-size:16px}
+ .release-grid,.about{gap:35px}.release-copy h2{font-size:clamp(52px,10vw,76px)}h2{font-size:clamp(36px,7vw,52px);letter-spacing:-1.2px}
+ .button,.text-link{min-height:58px;font-size:16px}.release-copy .button,.release-copy .text-link{display:flex;width:100%}
+ .platform-section{padding:45px 6% 55px}.platforms{gap:16px}.platforms a{font-size:16px;min-height:85px;padding:17px 10px;gap:9px}.platforms a:before{width:6px;height:24px}
+ .about-copy .intro{font-size:19px}.about-image{width:100%}.signature{right:15px;font-size:25px}
+ .studio{height:660px}.studio>div{left:6%;right:6%;bottom:45px;top:auto}.studio h2{font-size:clamp(36px,8vw,52px)}
+ .gallery-grid{gap:14px}.gallery-item{border-radius:10px}.gallery-item:nth-child(2){margin-top:28px}
+ .contact h2{font-size:clamp(34px,7vw,52px);letter-spacing:-1.4px}.contact p:not(.eyebrow){font-size:17px}
+ .email{display:block;width:100%;font-size:clamp(15px,4.1vw,22px);padding:21px 10px;letter-spacing:-.3px}
+ .socials{display:grid;grid-template-columns:1fr 1fr;gap:14px}.socials a{min-width:0;min-height:66px;font-size:17px;padding:16px 12px;gap:10px}
+ footer{font-size:14px;gap:15px}footer .brand{font-size:20px}.eyebrow{font-size:14px}
+}
+@media(max-width:360px){.brand{font-size:16px}.brand span{font-size:11px}.language select{max-width:100px}.platforms{grid-template-columns:1fr}.hero-content{padding-top:350px}.hero{min-height:800px}}
+@media(prefers-reduced-motion:reduce){.button:hover,.text-link:hover,.platforms a:hover,.socials a:hover,.email:hover{transform:none}}
